@@ -1,0 +1,250 @@
+.last, .main-intro, .similar-to-last, .company, .company .company-middle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.last, .main-intro, .similar-to-last {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: top right;
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.6); }
+  .last .back-overlay, .main-intro .back-overlay, .similar-to-last .back-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 2; }
+
+.main-intro {
+  background-image: url("../src/images/backgrounds/osuSagiri.jpg"); }
+  .main-intro h1 {
+    font-size: 96px;
+    line-height: 96px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 1rem;
+    z-index: 3; }
+  .main-intro h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+    z-index: 3; }
+  .main-intro h3 {
+    font-size: 28px;
+    font-weight: 400;
+    position: absolute;
+    top: 80%;
+    z-index: 3; }
+  .main-intro .back-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 2; }
+
+.invitation-links {
+  display: grid;
+  margin-top: 45px;
+  grid-template-columns: 300px 300px;
+  z-index: 3;
+  justify-items: center;
+  grid-template-rows: 80px;
+  grid-template-areas: "discord" "reddit" "not-afiliated-btw" "not-afiliated-btw"; }
+  .invitation-links a.button {
+    display: inline-block;
+    padding: 15px 20px;
+    border-style: none;
+    outline-style: none;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -4px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+    font-weight: 500;
+    transition: all linear 0.1s;
+    text-align: center; }
+    .invitation-links a.button p {
+      padding: 15px 5px;
+      display: inline-block;
+      margin: 0; }
+    .invitation-links a.button img {
+      max-width: 48px;
+      max-height: 48px;
+      float: left; }
+    .invitation-links a.button.discord-button {
+      background: #7289DA; }
+    .invitation-links a.button.reddit-button {
+      color: #EFF7FF;
+      background: #FF5700; }
+    .invitation-links a.button:hover {
+      filter: brightness(1.3); }
+
+canvas {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: transparent;
+  width: 100%;
+  height: 100%; }
+
+.section {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #a1a0a0; }
+  .section h2 {
+    margin: 0 5%;
+    font-weight: 300;
+    color: #444;
+    font-size: 32px;
+    display: inline-block; }
+  .section p {
+    margin: 0 5%; }
+  .section h1 {
+    margin: 0 5%;
+    font-weight: 300;
+    font-size: 40px;
+    color: #444;
+    display: inline-block; }
+  .section .right {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    text-align: left; }
+    .section .right span {
+      text-align: left; }
+  .section .left {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    text-align: right; }
+    .section .left span {
+      text-align: right; }
+  .section img {
+    max-height: 500px; }
+  .section:nth-child(odd) {
+    background-color: #f3f3f3; }
+  .section:nth-child(even) {
+    background-color: #fcfcfc; }
+
+.similar-to-last {
+  background-image: url("../src/images/backgrounds/sagiriYoink.png");
+  height: 75vh; }
+  .similar-to-last div {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+
+.sagiri-gun .left {
+  flex-direction: column;
+  align-items: flex-end; }
+
+.company {
+  flex-direction: row;
+  justify-content: space-around; }
+  .company h1 {
+    margin-bottom: 35px; }
+  .company h2 {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  .company .company-middle-container {
+    justify-content: flex-end;
+    margin: 0; }
+    .company .company-middle-container h1 {
+      margin: 0; }
+    .company .company-middle-container h2 {
+      margin: 10px 0 0 0; }
+    .company .company-middle-container .company-button-container button {
+      margin: 10px;
+      display: inline-block;
+      padding: 15px 20px;
+      border-style: none;
+      outline-style: none;
+      border-radius: 50px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -4px rgba(0, 0, 0, 0.2);
+      text-shadow: none;
+      font-weight: 500;
+      transition: all linear 0.1s;
+      text-align: center; }
+      .company .company-middle-container .company-button-container button.yes-button {
+        background-color: green; }
+      .company .company-middle-container .company-button-container button.no-button {
+        background-color: #d20000; }
+      .company .company-middle-container .company-button-container button:hover {
+        filter: brightness(1.5); }
+
+.compare {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .compare h1 {
+    margin: 50px; }
+  .compare .characters {
+    display: flex;
+    margin-right: 8px;
+    border-top: 2px solid #8b8ca7; }
+    .compare .characters .character {
+      max-width: 250px;
+      max-height: 375px; }
+      .compare .characters .character.megumi {
+        border-left: 2px solid #8b8ca7;
+        border-right: 2px solid #8b8ca7; }
+      .compare .characters .character.sagiri {
+        border-left: 2px solid #8b8ca7; }
+      .compare .characters .character.elf-yamada {
+        border-left: 2px solid #8b8ca7; }
+      .compare .characters .character.muramasa {
+        border-left: 2px solid #8b8ca7; }
+  .compare .compare-container {
+    margin-right: 250px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-rows: 450px;
+    border-left: 2px solid #8b8ca7; }
+    .compare .compare-container .stats {
+      display: grid;
+      grid-template-columns: 250px;
+      grid-template-rows: 75px 75px 75px 75px 75px;
+      align-items: stretch;
+      grid-row-gap: 1px; }
+      .compare .compare-container .stats h3 {
+        font-size: 14px;
+        margin: 0;
+        color: #444;
+        font-weight: 400; }
+      .compare .compare-container .stats .check {
+        max-height: 25px; }
+      .compare .compare-container .stats div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
+        .compare .compare-container .stats div:nth-child(odd) {
+          background-color: #eaecee; }
+
+.idkwhatimdoing {
+  background-image: url("../src/images/backgrounds/sagiriPantsu.png"); }
+
+.last h1, .main-intro h1, .similar-to-last h1 {
+  font-size: 128px;
+  line-height: 128px;
+  color: white; }
+
+.introduction .right {
+  flex-direction: column; }
+
+/*# sourceMappingURL=index.css.map */
