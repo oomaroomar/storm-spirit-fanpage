@@ -1,0 +1,110 @@
+%default-column-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.last {
+    @extend %default-column-flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: top right;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 0 3px 4px rgba(0, 0, 0, .6);
+    .back-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .10) 100%);
+        z-index: 2;
+    }
+}
+
+.main-intro {
+    @extend %default-column-flex;
+    @extend .last;
+    background-image: url('../src/images/backgrounds/osuSagiri.jpg');
+    h1 {
+        font-size: 96px;
+        line-height: 96px;
+        font-weight: 400;
+        margin: 0;
+        z-index: 3;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 400;
+        margin: 0;
+        z-index: 3;
+    }
+    h3 {
+        font-size: 28px;
+        font-weight: 400;
+        position: absolute;
+        top: 80%;
+        z-index: 3;
+    }
+    .back-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .60) 100%);
+        z-index: 2;
+    }
+}
+.invitation-links {
+    display: grid;
+    margin-top: 45px;
+    grid-template-columns: 300px 300px;
+    z-index: 3;
+    justify-items: center;
+    grid-template-rows: 80px;
+    grid-template-areas: 
+        "discord" "reddit"
+        "not-afiliated-btw" "not-afiliated-btw";
+    a.button {
+        display: inline-block;
+        padding: 15px 20px;
+        border-style: none;
+        outline-style: none;
+        border-radius: 100px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -4px rgba(0, 0, 0, .2);
+        text-shadow: none;
+        font-weight: 500;
+        transition: all linear 0.1s;
+        text-align: center;
+        p {
+            padding: 15px 5px;
+            display: inline-block;
+            margin: 0;
+        }
+        img {
+            max-width: 48px;
+            max-height: 48px;
+            float: left;
+        }
+        &.discord-button {
+            background: #7289DA;
+        }
+        &.reddit-button {
+            color: #EFF7FF;
+            background: #FF5700;
+        }
+        &:hover {
+            filter: brightness(1.3);
+        }
+    }
+}
+@import 'components';

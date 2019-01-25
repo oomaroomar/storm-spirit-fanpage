@@ -1,0 +1,217 @@
+$textColor: #444;
+$fromCenterMargin: 5%;
+$textHeightMargin: 0;
+$statColumn: 250px;
+$statRow: 75px;
+$thereHasToBeABetterWay: 14px;
+$compareBorders: rgb(139, 140, 167);
+
+canvas {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(161, 160, 160);
+    h2 {
+        margin: 0 $fromCenterMargin;
+        font-weight: 300;
+        color: $textColor;
+        font-size: 32px;
+        display: inline-block;
+    }
+    p {
+        margin: 0 $fromCenterMargin;
+    }
+    h1 {
+        margin: 0 $fromCenterMargin;
+        font-weight: 300;
+        font-size: 40px;
+        color: $textColor;
+        display: inline-block;
+    }
+    .right {
+        display: flex;
+        width: 50%;
+        justify-content: flex-start;
+        text-align: left;
+        span {
+            text-align: left;
+        }
+    }
+    .left {
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+        text-align: right;
+        span {
+            text-align: right;
+        }
+    }
+    img {
+        max-height: 500px;
+    }
+    &:nth-child(odd) {
+        background-color:#f3f3f3;
+    }
+    &:nth-child(even) {
+        background-color: #fcfcfc; 
+    }
+}
+
+.similar-to-last {
+    @extend .last;
+    background-image: url('../src/images/backgrounds/sagiriYoink.png');
+    height: 75vh;
+    div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}
+.sagiri-gun {
+    .left {
+        flex-direction: column;
+        align-items: flex-end;
+        
+    }
+}
+
+.company {
+    @extend %default-column-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    h1 {
+        margin-bottom: 35px;
+    }
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .company-middle-container {
+        @extend %default-column-flex;
+        justify-content: flex-end;
+        margin: 0;
+        h1 {
+            margin: 0;
+        }
+        h2 {
+            margin: 10px 0 0 0;
+        }
+        .company-button-container {
+            button {
+                margin: 10px;
+                display: inline-block;
+                padding: 15px 20px;
+                border-style: none;
+                outline-style: none;
+                border-radius: 50px;
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -4px rgba(0, 0, 0, .2);
+                text-shadow: none;
+                font-weight: 500;
+                transition: all linear 0.1s;
+                text-align: center;
+                &.yes-button {
+                    background-color: green;
+                }
+                &.no-button {
+                    background-color: rgb(210, 0, 0);
+                }
+                &:hover {
+                    filter: brightness(1.5);
+                }
+            }
+        }
+    } 
+}
+.compare {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin: 50px;
+    }
+    .characters {
+        display: flex;
+        margin-right: 8px;
+        border-top: 2px solid $compareBorders;
+        .character {
+            max-width: $statColumn;
+            max-height: 375px;
+            &.megumi {
+                border-left: 2px solid $compareBorders;
+                border-right: 2px solid $compareBorders;
+            }
+            &.sagiri {
+                border-left: 2px solid $compareBorders;
+            }
+            &.elf-yamada {
+                border-left: 2px solid $compareBorders;
+            }
+            &.muramasa {
+                border-left: 2px solid $compareBorders;
+            }
+        }
+    }
+    .compare-container {
+        margin-right: $statColumn;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: $statColumn $statColumn $statColumn $statColumn $statColumn;
+        grid-template-rows: $statRow*6;
+        border-left: 2px solid $compareBorders;
+        .stats {
+            display: grid;
+            grid-template-columns: $statColumn;
+            grid-template-rows: $statRow $statRow $statRow $statRow $statRow;
+            align-items: stretch;
+            grid-row-gap: 1px;
+            h3 {
+                font-size: $thereHasToBeABetterWay;
+                margin: 0;
+                color: $textColor;
+                font-weight: 400;
+            }
+            .check {
+                max-height: $statRow/3;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                &:nth-child(odd) {
+                    background-color: #eaecee;
+                }
+            }
+        }
+    }
+}
+
+.idkwhatimdoing {
+    background-image: url('../src/images/backgrounds/sagiriPantsu.png');
+}
+
+.last {
+    h1 {
+        font-size: 128px;
+        line-height: 128px;
+        margin: 0;
+        color: white;
+    }
+}
+.introduction {
+    .right {
+        flex-direction: column;
+    }
+}
