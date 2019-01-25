@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from 'react-helmet'
 
 import MainIntro from './components/MainIntro'
 import Introduction from './components/Introduction'
@@ -64,6 +65,23 @@ class App extends React.Component {
 
     return(
       <div>
+      <Helmet>
+        <title>Sagiri: the best waifu ever</title>
+        <meta
+          name='description'
+          content='Discover why Sagiri is the best charracter and waifu'
+        />
+        <meta
+          name='keywords'
+          content='eromanga, eromanga sensei, sagiri, izumi sagiri, izumi, masamune, izumi masamune, yamada, yamada elf, elf
+          saori, makishima saori, jinno, jinno megumi, megumi, senju muramasa, muramasa, anime, kawaii, cute, little sister, imouto'
+        />
+        <link
+          rel='icon'
+          sizes='192x192'
+          href={require('./images/pngs/sagiriKek.png')}
+        />
+      </Helmet>
       <MainIntro/>
       <div className='scroll'>
         <JoinUs/>
