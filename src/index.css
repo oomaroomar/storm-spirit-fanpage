@@ -1,93 +1,107 @@
-.last, .main-intro, .similar-to-last, .company, .company .company-middle-container {
+.company .company-middle-container, .company, .main-intro, .last, .similar-to-last {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  word-wrap: break-word;
+}
 
-.last, .main-intro, .similar-to-last {
+.last, .similar-to-last, .main-intro {
   width: 100%;
   height: 100vh;
   position: relative;
   background-size: cover;
   background-position: top right;
   background-attachment: fixed;
-  color: white;
-  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.6); }
-  .last .back-overlay, .main-intro .back-overlay, .similar-to-last .back-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
-    z-index: 2; }
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.6);
+}
+.last .back-overlay, .similar-to-last .back-overlay, .main-intro .back-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: 2;
+}
 
 .main-intro {
-  background-image: url("../src/images/backgrounds/osuSagiri.jpg"); }
-  .main-intro h1 {
-    font-size: 96px;
-    line-height: 96px;
-    font-weight: 400;
-    margin: 0;
-    margin-bottom: 1rem;
-    z-index: 3; }
-  .main-intro h2 {
-    font-size: 32px;
-    font-weight: 400;
-    margin: 0;
-    z-index: 3; }
-  .main-intro h3 {
-    font-size: 28px;
-    font-weight: 400;
-    position: absolute;
-    top: 80%;
-    z-index: 3; }
-  .main-intro .back-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-    z-index: 2; }
+  background-image: url("../src/images/big_picture_storm.jpg");
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.main-intro h1 {
+  font-size: 4em;
+  line-height: 1em;
+  font-weight: 400;
+  margin-bottom: 2px;
+  z-index: 3;
+}
+.main-intro h2 {
+  font-size: 3em;
+  font-weight: 400;
+  z-index: 3;
+}
+.main-intro h3 {
+  font-size: 2.5em;
+  font-weight: 400;
+  top: 80%;
+  z-index: 3;
+}
+.main-intro .back-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 2;
+}
 
 .invitation-links {
-  display: grid;
-  margin-top: 45px;
-  grid-template-columns: 300px 300px;
+  display: flex;
+  margin: 5%;
   z-index: 3;
   justify-items: center;
-  grid-template-rows: 80px;
-  grid-template-areas: "discord" "reddit" "not-afiliated-btw" "not-afiliated-btw"; }
-  .invitation-links a.button {
-    display: inline-block;
-    padding: 15px 20px;
-    border-style: none;
-    outline-style: none;
-    border-radius: 100px;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -4px rgba(0, 0, 0, 0.2);
-    text-shadow: none;
-    font-weight: 500;
-    transition: all linear 0.1s;
-    text-align: center; }
-    .invitation-links a.button p {
-      padding: 15px 5px;
-      display: inline-block;
-      margin: 0; }
-    .invitation-links a.button img {
-      max-width: 48px;
-      max-height: 48px;
-      float: left; }
-    .invitation-links a.button.discord-button {
-      background: #7289DA; }
-    .invitation-links a.button.reddit-button {
-      color: #EFF7FF;
-      background: #FF5700; }
-    .invitation-links a.button:hover {
-      filter: brightness(1.3); }
+}
+.invitation-links a.button {
+  display: inline-block;
+  padding: 15px 20px;
+  border-style: none;
+  outline-style: none;
+  border-radius: 100px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -4px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+  font-weight: 500;
+  transition: all linear 0.1s;
+  text-align: center;
+}
+.invitation-links a.button p {
+  padding: 15px 5px;
+  display: inline-block;
+  margin: 0;
+}
+.invitation-links a.button img {
+  max-width: 48px;
+  max-height: 48px;
+  float: left;
+}
+.invitation-links a.button.discord-button {
+  background: #7289DA;
+}
+.invitation-links a.button.reddit-button {
+  color: #EFF7FF;
+  background: #FF5700;
+}
+.invitation-links a.button:hover {
+  filter: brightness(1.3);
+}
 
 canvas {
   margin: 0;
@@ -95,156 +109,235 @@ canvas {
   font-family: sans-serif;
   background: transparent;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .section {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid #a1a0a0; }
-  .section h2 {
-    margin: 0 5%;
-    font-weight: 300;
-    color: #444;
-    font-size: 32px;
-    display: inline-block; }
-  .section p {
-    margin: 0 5%; }
-  .section h1 {
-    margin: 0 5%;
-    font-weight: 300;
-    font-size: 40px;
-    color: #444;
-    display: inline-block; }
-  .section .right {
-    display: flex;
-    width: 50%;
-    justify-content: flex-start;
-    text-align: left; }
-    .section .right span {
-      text-align: left; }
-  .section .left {
-    display: flex;
-    width: 50%;
-    justify-content: flex-end;
-    text-align: right; }
-    .section .left span {
-      text-align: right; }
-  .section img {
-    max-height: 500px; }
-  .section:nth-child(odd) {
-    background-color: #f3f3f3; }
-  .section:nth-child(even) {
-    background-color: #fcfcfc; }
+  border-top: 2px solid #a1a0a0;
+}
+.section h2 {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 2em;
+  display: inline-block;
+}
+.section p {
+  margin: 0 5%;
+}
+.section h1 {
+  margin: 5%;
+  font-weight: 300;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.85);
+  display: inline-block;
+}
+.section .right {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  margin: 2% 5%;
+}
+.section .right span {
+  text-align: left;
+}
+.section .left {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: flex-end;
+  text-align: right;
+  margin: 2% 5%;
+}
+.section img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  max-width: 300px;
+}
+.section:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+.section:nth-child(even) {
+  background-color: #fcfcfc;
+}
 
 .similar-to-last {
-  background-image: url("../src/images/backgrounds/sagiriYoink.png");
-  height: 75vh; }
-  .similar-to-last div {
-    width: 100%;
-    height: 100%;
-    position: absolute; }
-
-.sagiri-gun .left {
-  flex-direction: column;
-  align-items: flex-end; }
+  height: 75vh;
+}
+.similar-to-last div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 
 .company {
   flex-direction: row;
-  justify-content: space-around; }
-  .company h1 {
-    margin-bottom: 35px; }
-  .company h2 {
-    margin-top: 20px;
-    margin-bottom: 10px; }
-  .company .company-middle-container {
-    justify-content: flex-end;
-    margin: 0; }
-    .company .company-middle-container h1 {
-      margin: 0; }
-    .company .company-middle-container h2 {
-      margin: 10px 0 0 0; }
-    .company .company-middle-container .company-button-container button {
-      margin: 10px;
-      display: inline-block;
-      padding: 15px 20px;
-      border-style: none;
-      outline-style: none;
-      border-radius: 50px;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -4px rgba(0, 0, 0, 0.2);
-      text-shadow: none;
-      font-weight: 500;
-      transition: all linear 0.1s;
-      text-align: center; }
-      .company .company-middle-container .company-button-container button.yes-button {
-        background-color: green; }
-      .company .company-middle-container .company-button-container button.no-button {
-        background-color: #d20000; }
-      .company .company-middle-container .company-button-container button:hover {
-        filter: brightness(1.5); }
+  justify-content: space-around;
+}
+.company h1 {
+  margin-bottom: 35px;
+}
+.company h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.company .company-middle-container {
+  justify-content: flex-end;
+  margin: 0;
+}
+.company .company-middle-container h1 {
+  margin: 0;
+}
+.company .company-middle-container h2 {
+  margin: 10px 0 0 0;
+}
+.company .company-middle-container .company-button-container button {
+  margin: 10px;
+  display: inline-block;
+  padding: 15px 20px;
+  border-style: none;
+  outline-style: none;
+  border-radius: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -4px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+  font-weight: 500;
+  transition: all linear 0.1s;
+  text-align: center;
+}
+.company .company-middle-container .company-button-container button.yes-button {
+  background-color: green;
+}
+.company .company-middle-container .company-button-container button.no-button {
+  background-color: #d20000;
+}
+.company .company-middle-container .company-button-container button:hover {
+  filter: brightness(1.5);
+}
 
 .compare {
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  .compare h1 {
-    margin: 50px; }
-  .compare .characters {
-    display: flex;
-    margin-right: 8px;
-    border-top: 2px solid #8b8ca7; }
-    .compare .characters .character {
-      max-width: 250px;
-      max-height: 375px; }
-      .compare .characters .character.megumi {
-        border-left: 2px solid #8b8ca7;
-        border-right: 2px solid #8b8ca7; }
-      .compare .characters .character.sagiri {
-        border-left: 2px solid #8b8ca7; }
-      .compare .characters .character.elf-yamada {
-        border-left: 2px solid #8b8ca7; }
-      .compare .characters .character.muramasa {
-        border-left: 2px solid #8b8ca7; }
-  .compare .compare-container {
-    margin-right: 250px;
-    margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px 250px;
-    grid-template-rows: 450px;
-    border-left: 2px solid #8b8ca7; }
-    .compare .compare-container .stats {
-      display: grid;
-      grid-template-columns: 250px;
-      grid-template-rows: 75px 75px 75px 75px 75px;
-      align-items: stretch;
-      grid-row-gap: 1px; }
-      .compare .compare-container .stats h3 {
-        font-size: 14px;
-        margin: 0;
-        color: #444;
-        font-weight: 400; }
-      .compare .compare-container .stats .check {
-        max-height: 25px; }
-      .compare .compare-container .stats div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center; }
-        .compare .compare-container .stats div:nth-child(odd) {
-          background-color: #eaecee; }
+  align-items: center;
+}
+.compare h1 {
+  margin: 2%;
+}
+.compare .characters {
+  display: flex;
+  width: 100%;
+}
+.compare .characters .character {
+  height: 20%;
+  width: 20%;
+  max-width: 224px;
+  max-height: 126px;
+}
+.compare .compare-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: 90%;
+  align-items: stretch;
+  align-items: stretch;
+}
+.compare .compare-container .stats {
+  display: flex;
+  flex-direction: column;
+}
+.compare .compare-container .stats h3 {
+  font-size: 14px;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
+}
+.compare .compare-container .stats .check {
+  height: 1em;
+  width: 1em;
+}
+.compare .compare-container .stats .first {
+  width: 100%;
+  height: 100%;
+  max-width: 208px;
+  max-height: 117px;
+}
+.compare .compare-container .stats div {
+  height: 100px;
+  max-width: 208px;
+  max-height: 117px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.compare .compare-container .stats div:nth-child(even) {
+  background-color: #eaecee;
+}
+.compare .compare-container .contests div:not(:first-of-type) {
+  border-left: 1px solid #8b8ca7;
+}
 
 .idkwhatimdoing {
-  background-image: url("../src/images/backgrounds/sagiriPantsu.png"); }
-
-.last h1, .main-intro h1, .similar-to-last h1 {
-  font-size: 128px;
-  line-height: 128px;
-  color: white; }
+  background-image: url("../src/images/Old_Storm_Flipping_TheBird.jpg");
+  color: rgba(255, 255, 255, 0.85);
+}
+.idkwhatimdoing h1 {
+  font-size: 3em;
+}
 
 .introduction .right {
-  flex-direction: column; }
+  flex-direction: column;
+}
+
+@media (max-width: 1250px) {
+  .compare {
+    display: none;
+  }
+}
+@media (max-width: 570px) {
+  .section {
+    flex-direction: column;
+  }
+  .section .texty {
+    width: 100%;
+  }
+  .section .texty h1 {
+    text-align: left;
+  }
+
+  .invitation-links {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1330px) {
+  .idkwhatimdoing {
+    background-image: url("../src/images/Old_Storm_Flipping_TheBird_2.jpg");
+  }
+}
+@media (max-width: 960px) {
+  .idkwhatimdoing {
+    background-image: url("../src/images/Old_Storm_Flipping_TheBird_5.jpg");
+  }
+}
+@media (max-width: 667px) {
+  .idkwhatimdoing {
+    background-image: url("../src/images/Old_Storm_Flipping_TheBird_3.jpg");
+  }
+
+  .main-intro {
+    background-image: url("../src/images/big_picture_storm_2.jpg");
+  }
+}
+@media (max-width: 588px) {
+  .idkwhatimdoing {
+    background-image: url("../src/images/Old_Storm_Flipping_TheBird_4.jpg");
+  }
+}
 
 /*# sourceMappingURL=index.css.map */

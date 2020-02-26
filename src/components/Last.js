@@ -1,12 +1,9 @@
 import React from 'react'
 
-function Last(props) {
-    return(
-        <div className='section last idkwhatimdoing'>
-            <h1>She's the Best.</h1>
-            <div className='back-overlay'></div>
-        </div>
-    )
-}
+const Last = () => 
+<div className='last idkwhatimdoing'>
+    <h1>Ooh, who's that handsome devil?</h1>
+    <div className='back-overlay'></div>
+</div>
 
 export default Last

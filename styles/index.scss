@@ -1,3 +1,5 @@
+$altTextColor: rgba(255,255,255, 0.85);
+
 %default-column-flex{
     display: flex;
     justify-content: center;
@@ -8,6 +10,7 @@
 body{
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    word-wrap: break-word;
 }
 .last {
     @extend %default-column-flex;
@@ -17,7 +20,7 @@ body{
     background-size: cover;
     background-position: top right;
     background-attachment: fixed;
-    color: white;
+    color: $altTextColor;
     text-shadow: 0 3px 4px rgba(0, 0, 0, .6);
     .back-overlay {
         position: absolute;
@@ -31,26 +34,26 @@ body{
 .main-intro {
     @extend %default-column-flex;
     @extend .last;
-    background-image: url('../src/images/backgrounds/osuSagiri.jpg');
+    background-image: url('../src/images/big_picture_storm.jpg');
+    text-align: center;
+    display: flex;
+    justify-content: center;
     h1 {
-        font-size: 96px;
-        line-height: 96px;
+        font-size: 4em;    
+        line-height: 1em;
         font-weight: 400;
-        margin: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2px;
         z-index: 3;
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 3em;
         font-weight: 400;
-        margin: 0;
         z-index: 3;
-    }
+    }   
     h3 {
-        font-size: 28px;
+        font-size: 2.5em;
         font-weight: 400;
-        position: absolute;
         top: 80%;
         z-index: 3;
     }
@@ -63,15 +66,10 @@ body{
     }
 }
 .invitation-links {
-    display: grid;
-    margin-top: 45px;
-    grid-template-columns: 300px 300px;
+    display: flex;
+    margin: 5%;
     z-index: 3;
     justify-items: center;
-    grid-template-rows: 80px;
-    grid-template-areas: 
-        "discord" "reddit"
-        "not-afiliated-btw" "not-afiliated-btw";
     a.button {
         display: inline-block;
         padding: 15px 20px;
